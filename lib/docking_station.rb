@@ -3,7 +3,6 @@ require './lib/bike'
 class DockingStation
 
   attr_reader :bike
-  attr_reader :bikes
   attr_reader :capacity
 
   def initialize
@@ -24,6 +23,8 @@ DEFAULT_CAPACITY = 20
   end
 
   private
+
+  attr_reader :bikes
 
   def full?
     @bikes.count >= @capacity
